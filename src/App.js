@@ -14,6 +14,7 @@ import EducationPage from './components/EducationPage';
 import Login from './pages/Login';
 import RiskProfiler from './components/RiskProfiler';
 import About from './pages/about';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/footer" element={<Footer />} />
 
         <Route path="/" element={<LandingPage />} />
         <Route path="/risk" element={<RiskProfiler />} />
@@ -38,8 +40,10 @@ function App() {
         <Route path="/market-analysis" element={<MarketAnalysis />} />
         <Route path="/sip-calculator" element={<SIPCalculator />} />
         <Route path="/education" element={<EducationPage />} />
-        
+
       </Routes>
+      <Footer />
+
     </>
   );
 }
