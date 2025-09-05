@@ -302,3 +302,14 @@ app.get('/api/challenge/prices', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`✅ Merged server running on http://localhost:${PORT}`));
+
+// Load environment variables from .env only in development
+if (process.env.NODE_ENV !== "production") {
+  try {
+    require("dotenv").config();
+    console.log("✅ Loaded .env file");
+  } catch (err) {
+    console.warn("⚠️ dotenv not installed, skipping...");
+  }
+}
+
